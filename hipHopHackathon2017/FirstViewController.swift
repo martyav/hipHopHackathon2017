@@ -9,13 +9,15 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    
     var parkArray = [Park]()
+
+    @IBOutlet weak var getStartedButton: UIButton!
+    
+    @IBAction func getStartedButtonTapped(_ sender: UIButton) {
+    print("GS button tapped")}
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
+                super.viewDidLoad()
     }
     
     func getParks() {
