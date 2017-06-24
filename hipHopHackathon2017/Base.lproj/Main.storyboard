@@ -207,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKA-kL-9QR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="137"/>
+            <point key="canvasLocation" x="1113" y="137"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="m6S-An-lmE">
@@ -226,7 +226,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="CreativeDays" id="6Un-te-DKR" userLabel="CreativeDays">
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="dil-00-sNb"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Home" id="dil-00-sNb">
+                                            <connections>
+                                                <segue destination="2Xg-PF-gCA" kind="showDetail" action="showViewController:sender:" id="h6R-pg-Mox"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -240,7 +244,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Spr-P6-7xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911.20000000000005" y="805.54722638680664"/>
+            <point key="canvasLocation" x="916" y="963"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="8RD-Me-UxC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fn3-jQ-tFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="aPa-77-yYm" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5zW-iQ-dnE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1zc-WE-Nqb">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1zc-WE-Nqb" id="YPQ-TQ-tUv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aPa-77-yYm" id="ZEx-rd-gKW"/>
+                            <outlet property="delegate" destination="aPa-77-yYm" id="7l5-8V-TRz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="siq-KM-1rZ"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="450" y="1809"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pyw-Fq-cBd">
+            <objects>
+                <navigationController id="zQx-KJ-ly1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nsV-Dj-xuH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aPa-77-yYm" kind="relationship" relationship="rootViewController" id="cdQ-ko-mMw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3l-db-P4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495" y="1809"/>
         </scene>
         <!--Destination View Controller-->
         <scene sceneID="OhT-dM-16l">
@@ -277,7 +326,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Creative Days" id="UwZ-Vu-xav">
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="HX5-ty-Itp"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Home" id="HX5-ty-Itp">
+                                            <connections>
+                                                <segue destination="2Xg-PF-gCA" kind="show" id="cdv-4c-WuJ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -287,10 +340,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Wf-pW-1FW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653.5999999999999" y="136.28185907046478"/>
+            <point key="canvasLocation" x="2018" y="137"/>
         </scene>
     </scenes>
     <resources>
         <image name="NYC Map" width="408" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="h6R-pg-Mox"/>
+    </inferredMetricsTieBreakers>
 </document>
