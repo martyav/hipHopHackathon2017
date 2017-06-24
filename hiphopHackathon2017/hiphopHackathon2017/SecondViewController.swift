@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  hiphopHackathon2017
 //
 //  Created by C4Q on 6/24/17.
@@ -8,18 +8,20 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class SecondViewController: UIViewController {
 
-    @IBOutlet weak var mapBackgroundImageView: UIImageView!
-    @IBOutlet weak var getStartedButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
-    @IBAction func getStartedButton(_ sender: UIButton) {
-        print("Button pressed")
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+    
+
     /*
     // MARK: - Navigation
 
