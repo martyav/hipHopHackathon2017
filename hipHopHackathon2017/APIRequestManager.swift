@@ -12,8 +12,8 @@ class APIRequestManager {
     static let manager = APIRequestManager()
     private init() {}
     
-    func getData(endPoint: String, callback: @escaping (Data?) -> Void) {
-        guard let myURL = URL(string: endPoint) else { return }
+    func getData(endPoint: Endpoints, callback: @escaping (Data?) -> Void) {
+        guard let myURL = URL(string: endPoint.rawValue) else { return }
         let session = URLSession(configuration: URLSessionConfiguration.default)
         session.dataTask(with: myURL) { (data: Data?, response: URLResponse?, error: Error?) in
             if error != nil {
