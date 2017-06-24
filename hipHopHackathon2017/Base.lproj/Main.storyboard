@@ -112,16 +112,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="W9B-G9-4Dr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="W9B-G9-4Dr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTK-af-Dqg">
                                 <rect key="frame" x="1" y="308" width="373" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="0.66666666669999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
+                                <size key="titleShadowOffset" width="-3" height="3"/>
                                 <state key="normal" title="Random Trip">
-                                    <color key="titleColor" red="0.61960784310000006" green="0.66666666669999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="randomTripButtonTapped:" destination="2Xg-PF-gCA" eventType="touchUpInside" id="A4G-iN-PFx"/>
@@ -130,14 +131,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJz-uN-F1k" userLabel="RecommendedLeft">
                                 <rect key="frame" x="1" y="123" width="119" height="100"/>
-                                <color key="backgroundColor" red="0.97043269230769225" green="0.97043269230769225" blue="0.97043269230769225" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="119" id="eI3-dc-6fJ"/>
                                     <constraint firstAttribute="height" constant="100" id="fu1-iu-EFZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
                                 <state key="normal" title="Parks" image="icons8-Oak Leaf-100">
-                                    <color key="titleColor" red="0.61960784310000006" green="0.66666666669999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="recommendedLeftTapped:" destination="2Xg-PF-gCA" eventType="touchUpInside" id="tFU-tq-LVH"/>
@@ -145,10 +146,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSO-YN-twU" userLabel="RecommendedMiddle">
                                 <rect key="frame" x="128" y="123" width="118" height="101"/>
-                                <color key="backgroundColor" red="0.97043269230769225" green="0.97043269230769225" blue="0.97043269230769225" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
                                 <state key="normal" title="Beaches" image="icons8-Beach-100">
-                                    <color key="titleColor" red="0.61960784310000006" green="0.66666666669999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="recommendedMiddleTapped:" destination="2Xg-PF-gCA" eventType="touchUpInside" id="lBx-XX-TJG"/>
@@ -156,10 +157,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxU-5f-oCH" userLabel="RecommendedRight">
                                 <rect key="frame" x="254" y="123" width="121" height="102"/>
-                                <color key="backgroundColor" red="0.97043269230769225" green="0.97043269230769225" blue="0.97043269230769225" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
                                 <state key="normal" title="Events" image="icons8-Dancing-100">
-                                    <color key="titleColor" red="0.61960784310000006" green="0.66666666669999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="recommendedRightTapped:" destination="2Xg-PF-gCA" eventType="touchUpInside" id="p4n-jW-ltk"/>
@@ -167,24 +168,33 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcz-Gk-aEb" userLabel="ProfileButton">
                                 <rect key="frame" x="16" y="529" width="73" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
-                                <state key="normal" title="Profile"/>
+                                <size key="titleShadowOffset" width="-3" height="3"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICq-DX-ujo" userLabel="UseLocationButton">
                                 <rect key="frame" x="148" y="529" width="78" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
-                                <state key="normal" title="Location"/>
+                                <size key="titleShadowOffset" width="-3" height="3"/>
+                                <state key="normal" title="Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="T8c-7x-GLv" kind="show" id="55C-sM-3Un"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deL-xD-PJm" userLabel="ChatButton">
                                 <rect key="frame" x="295" y="529" width="64" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
-                                <state key="normal" title="Chat"/>
+                                <size key="titleShadowOffset" width="-3" height="3"/>
+                                <state key="normal" title="Chat">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDO-r2-gOp">
                                 <rect key="frame" x="1" y="0.0" width="373" height="44"/>
@@ -202,12 +212,14 @@
                         <constraints>
                             <constraint firstItem="WSO-YN-twU" firstAttribute="baseline" secondItem="bJz-uN-F1k" secondAttribute="firstBaseline" id="0ak-nh-4Hx"/>
                             <constraint firstItem="CUW-QT-UWX" firstAttribute="top" secondItem="vcz-Gk-aEb" secondAttribute="bottom" constant="88" id="11c-o1-fnk"/>
+                            <constraint firstItem="W9B-G9-4Dr" firstAttribute="top" secondItem="MDO-r2-gOp" secondAttribute="top" id="Acl-tq-j2s"/>
                             <constraint firstItem="WSO-YN-twU" firstAttribute="baseline" secondItem="RxU-5f-oCH" secondAttribute="firstBaseline" id="DyO-KR-yIN"/>
                             <constraint firstItem="WSO-YN-twU" firstAttribute="baseline" secondItem="RxU-5f-oCH" secondAttribute="baseline" id="FIY-eE-gvE"/>
                             <constraint firstItem="RTK-af-Dqg" firstAttribute="centerX" secondItem="zqj-gD-VAX" secondAttribute="centerX" id="IDo-S1-zsv"/>
                             <constraint firstItem="ICq-DX-ujo" firstAttribute="centerX" secondItem="WSO-YN-twU" secondAttribute="centerX" id="ILf-Db-kiS"/>
                             <constraint firstItem="bJz-uN-F1k" firstAttribute="top" secondItem="WSO-YN-twU" secondAttribute="top" id="NKs-kF-9xD"/>
                             <constraint firstItem="vcz-Gk-aEb" firstAttribute="centerX" secondItem="bJz-uN-F1k" secondAttribute="centerX" constant="-8" id="ODt-XW-5Ex"/>
+                            <constraint firstItem="W9B-G9-4Dr" firstAttribute="width" secondItem="zqj-gD-VAX" secondAttribute="width" id="PL2-zN-4yG"/>
                             <constraint firstItem="RxU-5f-oCH" firstAttribute="leading" secondItem="WSO-YN-twU" secondAttribute="trailing" constant="8" id="Rdu-rG-8gv"/>
                             <constraint firstItem="RxU-5f-oCH" firstAttribute="trailing" secondItem="zqj-gD-VAX" secondAttribute="trailingMargin" constant="16" id="SdG-9W-HeR"/>
                             <constraint firstItem="WSO-YN-twU" firstAttribute="centerX" secondItem="zqj-gD-VAX" secondAttribute="centerX" id="SrR-Pr-Oh0"/>
@@ -218,10 +230,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="deL-xD-PJm" secondAttribute="trailing" id="dVe-J6-aYc"/>
                             <constraint firstItem="RTK-af-Dqg" firstAttribute="width" secondItem="iuK-VU-3fK" secondAttribute="width" constant="-2" id="e6J-RT-daM"/>
                             <constraint firstItem="WSO-YN-twU" firstAttribute="top" secondItem="RxU-5f-oCH" secondAttribute="top" id="fbI-9S-CzR"/>
+                            <constraint firstItem="W9B-G9-4Dr" firstAttribute="trailing" secondItem="RxU-5f-oCH" secondAttribute="trailing" id="hTz-AK-liE"/>
                             <constraint firstItem="MDO-r2-gOp" firstAttribute="centerX" secondItem="RTK-af-Dqg" secondAttribute="centerX" id="icX-ik-4rN"/>
                             <constraint firstItem="vcz-Gk-aEb" firstAttribute="leading" secondItem="zqj-gD-VAX" secondAttribute="leadingMargin" id="kHy-uc-qkc"/>
                             <constraint firstItem="RTK-af-Dqg" firstAttribute="top" secondItem="WSO-YN-twU" secondAttribute="bottom" constant="84" id="liq-zd-s0a"/>
                             <constraint firstItem="WSO-YN-twU" firstAttribute="centerX" secondItem="iuK-VU-3fK" secondAttribute="centerX" constant="-1.5" id="mW1-Ga-91K"/>
+                            <constraint firstItem="W9B-G9-4Dr" firstAttribute="height" secondItem="zqj-gD-VAX" secondAttribute="height" id="oV6-GO-P2b"/>
                             <constraint firstItem="ICq-DX-ujo" firstAttribute="leading" secondItem="vcz-Gk-aEb" secondAttribute="trailing" constant="59" id="rc2-5S-af5"/>
                             <constraint firstItem="iuK-VU-3fK" firstAttribute="leading" secondItem="zqj-gD-VAX" secondAttribute="leading" constant="1" id="rj5-kY-Avi"/>
                             <constraint firstItem="deL-xD-PJm" firstAttribute="leading" secondItem="ICq-DX-ujo" secondAttribute="trailing" constant="69" id="rzN-rk-j2u"/>
@@ -349,19 +363,8 @@
                                     <constraint firstAttribute="height" constant="240" id="b0Y-tt-A32"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prospect Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5v-bo-Mgb">
-                                <rect key="frame" x="67" y="323" width="240" height="21"/>
-                                <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="-3" height="3"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Brooklyn, NY 11225" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaC-Ig-nmj">
-                                <rect key="frame" x="67" y="366" width="240" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="3Wc-FA-2CC"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prospect Park" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5v-bo-Mgb">
+                                <rect key="frame" x="67" y="323" width="240" height="49"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -380,23 +383,34 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brooklyn, NY 11225" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaC-Ig-nmj">
+                                <rect key="frame" x="42" y="368" width="291" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="3Wc-FA-2CC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="-3" height="3"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yrV-Ta-y8U" firstAttribute="top" secondItem="xWu-XY-GvS" secondAttribute="bottom" constant="13" id="1hZ-2x-C2W"/>
                             <constraint firstItem="kOe-os-QkL" firstAttribute="bottom" secondItem="9UN-rQ-HtW" secondAttribute="top" id="24g-8c-G1t"/>
-                            <constraint firstItem="yaC-Ig-nmj" firstAttribute="leading" secondItem="yrV-Ta-y8U" secondAttribute="leading" id="2rz-hn-5lO"/>
-                            <constraint firstItem="9UN-rQ-HtW" firstAttribute="top" secondItem="yaC-Ig-nmj" secondAttribute="bottom" constant="281" id="77p-QE-brB"/>
+                            <constraint firstItem="yaC-Ig-nmj" firstAttribute="leading" secondItem="yrV-Ta-y8U" secondAttribute="leading" constant="-25" id="2rz-hn-5lO"/>
+                            <constraint firstItem="9UN-rQ-HtW" firstAttribute="top" secondItem="yaC-Ig-nmj" secondAttribute="bottom" constant="238" id="77p-QE-brB"/>
                             <constraint firstItem="kOe-os-QkL" firstAttribute="height" secondItem="yR7-ag-F7j" secondAttribute="height" id="9v7-TU-qll"/>
                             <constraint firstItem="kOe-os-QkL" firstAttribute="top" secondItem="xWu-XY-GvS" secondAttribute="top" id="AAo-Hn-KS8"/>
                             <constraint firstItem="kOe-os-QkL" firstAttribute="centerX" secondItem="yaC-Ig-nmj" secondAttribute="centerX" id="BMu-aI-cGH"/>
                             <constraint firstItem="kOe-os-QkL" firstAttribute="centerX" secondItem="yrV-Ta-y8U" secondAttribute="centerX" id="Bgv-nK-EmJ"/>
                             <constraint firstItem="kOe-os-QkL" firstAttribute="leading" secondItem="xWu-XY-GvS" secondAttribute="leading" id="Ez1-kd-n7d"/>
-                            <constraint firstItem="yaC-Ig-nmj" firstAttribute="top" secondItem="d5v-bo-Mgb" secondAttribute="bottom" constant="21" id="H4M-lP-OLS"/>
-                            <constraint firstItem="yaC-Ig-nmj" firstAttribute="leading" secondItem="yR7-ag-F7j" secondAttribute="leadingMargin" constant="51" id="IaD-CA-LB7"/>
-                            <constraint firstItem="kOe-os-QkL" firstAttribute="centerY" secondItem="d5v-bo-Mgb" secondAttribute="centerY" id="NKQ-z0-fnG"/>
+                            <constraint firstItem="yaC-Ig-nmj" firstAttribute="top" secondItem="d5v-bo-Mgb" secondAttribute="bottom" constant="-4" id="H4M-lP-OLS"/>
+                            <constraint firstItem="yaC-Ig-nmj" firstAttribute="leading" secondItem="yR7-ag-F7j" secondAttribute="leadingMargin" constant="26" id="IaD-CA-LB7"/>
+                            <constraint firstItem="kOe-os-QkL" firstAttribute="centerY" secondItem="d5v-bo-Mgb" secondAttribute="centerY" constant="-14" id="NKQ-z0-fnG"/>
                             <constraint firstItem="kOe-os-QkL" firstAttribute="width" secondItem="yR7-ag-F7j" secondAttribute="width" id="cTj-5t-sAi"/>
-                            <constraint firstItem="yaC-Ig-nmj" firstAttribute="leading" secondItem="d5v-bo-Mgb" secondAttribute="leading" id="lUA-Iq-2xL"/>
+                            <constraint firstItem="yaC-Ig-nmj" firstAttribute="leading" secondItem="d5v-bo-Mgb" secondAttribute="leading" constant="-25" id="lUA-Iq-2xL"/>
                             <constraint firstItem="kOe-os-QkL" firstAttribute="trailing" secondItem="xWu-XY-GvS" secondAttribute="trailing" id="mWj-5z-0hm"/>
                             <constraint firstItem="kOe-os-QkL" firstAttribute="centerX" secondItem="d5v-bo-Mgb" secondAttribute="centerX" id="soo-1d-NDg"/>
                             <constraint firstItem="kOe-os-QkL" firstAttribute="leading" secondItem="yR7-ag-F7j" secondAttribute="leading" id="wBi-Sg-Mgy"/>
