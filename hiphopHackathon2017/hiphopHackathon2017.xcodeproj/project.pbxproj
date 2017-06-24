@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3BBE5921EFEF63800567A4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BBE5911EFEF63800567A4E /* HomeViewController.swift */; };
+		D3BBE5941EFEFA3B00567A4E /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BBE5931EFEFA3B00567A4E /* APIRequestManager.swift */; };
+		D3BBE5961EFEFA7600567A4E /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BBE5951EFEFA7600567A4E /* Endpoints.swift */; };
+		D3BBE5981EFEFCB000567A4E /* FunThingsToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BBE5971EFEFCB000567A4E /* FunThingsToDo.swift */; };
 		D3D0FBF21EFEF2F50034AC4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0FBF11EFEF2F50034AC4E /* AppDelegate.swift */; };
-		D3D0FBF41EFEF2F50034AC4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0FBF31EFEF2F50034AC4E /* ViewController.swift */; };
+		D3D0FBF41EFEF2F50034AC4E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0FBF31EFEF2F50034AC4E /* FirstViewController.swift */; };
 		D3D0FBF71EFEF2F50034AC4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D0FBF51EFEF2F50034AC4E /* Main.storyboard */; };
 		D3D0FBF91EFEF2F50034AC4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3D0FBF81EFEF2F50034AC4E /* Assets.xcassets */; };
 		D3D0FBFC1EFEF2F50034AC4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D0FBFA1EFEF2F50034AC4E /* LaunchScreen.storyboard */; };
@@ -26,9 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3BBE5911EFEF63800567A4E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D3BBE5931EFEFA3B00567A4E /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
+		D3BBE5951EFEFA7600567A4E /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		D3BBE5971EFEFCB000567A4E /* FunThingsToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunThingsToDo.swift; sourceTree = "<group>"; };
 		D3D0FBEE1EFEF2F40034AC4E /* hiphopHackathon2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hiphopHackathon2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D0FBF11EFEF2F50034AC4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3D0FBF31EFEF2F50034AC4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3D0FBF31EFEF2F50034AC4E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		D3D0FBF61EFEF2F50034AC4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3D0FBF81EFEF2F50034AC4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3D0FBFB1EFEF2F50034AC4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,7 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				D3D0FBF11EFEF2F50034AC4E /* AppDelegate.swift */,
-				D3D0FBF31EFEF2F50034AC4E /* ViewController.swift */,
+				D3BBE5931EFEFA3B00567A4E /* APIRequestManager.swift */,
+				D3BBE5951EFEFA7600567A4E /* Endpoints.swift */,
+				D3BBE5971EFEFCB000567A4E /* FunThingsToDo.swift */,
+				D3D0FBF31EFEF2F50034AC4E /* FirstViewController.swift */,
+				D3BBE5911EFEF63800567A4E /* HomeViewController.swift */,
 				D3D0FBF51EFEF2F50034AC4E /* Main.storyboard */,
 				D3D0FBF81EFEF2F50034AC4E /* Assets.xcassets */,
 				D3D0FBFA1EFEF2F50034AC4E /* LaunchScreen.storyboard */,
@@ -201,8 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D0FBF41EFEF2F50034AC4E /* ViewController.swift in Sources */,
+				D3BBE5981EFEFCB000567A4E /* FunThingsToDo.swift in Sources */,
+				D3BBE5941EFEFA3B00567A4E /* APIRequestManager.swift in Sources */,
+				D3D0FBF41EFEF2F50034AC4E /* FirstViewController.swift in Sources */,
 				D3D0FBF21EFEF2F50034AC4E /* AppDelegate.swift in Sources */,
+				D3BBE5921EFEF63800567A4E /* HomeViewController.swift in Sources */,
+				D3BBE5961EFEFA7600567A4E /* Endpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +428,7 @@
 				D3D0FC0D1EFEF2F50034AC4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3D0FC0E1EFEF2F50034AC4E /* Build configuration list for PBXNativeTarget "hiphopHackathon2017Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +437,7 @@
 				D3D0FC101EFEF2F50034AC4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
