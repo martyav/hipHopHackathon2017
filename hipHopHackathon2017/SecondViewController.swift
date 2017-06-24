@@ -13,6 +13,22 @@ class SecondViewController: UIViewController {
 
     @IBAction func randomTripButtonTapped(_ sender: UIButton) {
     }
+    @IBOutlet weak var recommendedLeft: UIButton!
+    @IBOutlet weak var recommendedMiddle: UIButton!
+    @IBOutlet weak var recommendedRight: UIButton!
+    @IBAction func recommendedLeftTapped(_ sender: UIButton) {
+    }
+    @IBAction func recommendedMiddleTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func recommendedRightTapped(_ sender: UIButton) {
+    }
+    
+    
+    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var useLocationButton: UIButton!
+    @IBOutlet weak var chatButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

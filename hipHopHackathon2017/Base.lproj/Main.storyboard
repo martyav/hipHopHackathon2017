@@ -86,16 +86,40 @@
                                     <constraint firstAttribute="height" constant="100" id="fu1-iu-EFZ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="recommendedLeftTapped:" destination="2Xg-PF-gCA" eventType="touchUpInside" id="tFU-tq-LVH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSO-YN-twU" userLabel="RecommendedMiddle">
                                 <rect key="frame" x="137" y="134" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="recommendedMiddleTapped:" destination="2Xg-PF-gCA" eventType="touchUpInside" id="lBx-XX-TJG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxU-5f-oCH" userLabel="RecommendedRight">
                                 <rect key="frame" x="259" y="134" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="recommendedRightTapped:" destination="2Xg-PF-gCA" eventType="touchUpInside" id="p4n-jW-ltk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcz-Gk-aEb" userLabel="ProfileButton">
+                                <rect key="frame" x="43" y="549" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Profile"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICq-DX-ujo" userLabel="UseLocationButton">
+                                <rect key="frame" x="164" y="549" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Location"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deL-xD-PJm" userLabel="ChatButton">
+                                <rect key="frame" x="297" y="549" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chat"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,7 +143,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chatButton" destination="deL-xD-PJm" id="vNk-YG-xZL"/>
+                        <outlet property="profileButton" destination="vcz-Gk-aEb" id="G6l-nx-7Kt"/>
                         <outlet property="randomTripButton" destination="RTK-af-Dqg" id="rHq-tw-r1s"/>
+                        <outlet property="recommendedLeft" destination="bJz-uN-F1k" id="aKw-7a-AbB"/>
+                        <outlet property="recommendedMiddle" destination="WSO-YN-twU" id="rJP-PU-it9"/>
+                        <outlet property="recommendedRight" destination="RxU-5f-oCH" id="TOj-su-ME8"/>
+                        <outlet property="useLocationButton" destination="ICq-DX-ujo" id="h2x-KL-rhD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKA-kL-9QR" userLabel="First Responder" sceneMemberID="firstResponder"/>
