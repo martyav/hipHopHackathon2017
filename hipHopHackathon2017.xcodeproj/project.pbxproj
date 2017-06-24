@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		810C84BF1EFF0D10008D8B83 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C84BE1EFF0D10008D8B83 /* SecondViewController.swift */; };
 		810C84C11EFF1112008D8B83 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C84C01EFF1112008D8B83 /* DestinationViewController.swift */; };
+		810C84C31EFF149B008D8B83 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C84C21EFF149B008D8B83 /* MapViewController.swift */; };
+		810C84C61EFF1689008D8B83 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810C84C51EFF1689008D8B83 /* MapKit.framework */; };
 		D3F7B74C1EFF0789009FB4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B74B1EFF0789009FB4AD /* AppDelegate.swift */; };
 		D3F7B74E1EFF0789009FB4AD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B74D1EFF0789009FB4AD /* FirstViewController.swift */; };
 		D3F7B7511EFF0789009FB4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F7B74F1EFF0789009FB4AD /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		810C84BE1EFF0D10008D8B83 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		810C84C01EFF1112008D8B83 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
+		810C84C21EFF149B008D8B83 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		810C84C51EFF1689008D8B83 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D3F7B7481EFF0789009FB4AD /* hipHopHackathon2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hipHopHackathon2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F7B74B1EFF0789009FB4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F7B74D1EFF0789009FB4AD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810C84C61EFF1689008D8B83 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +71,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		810C84C41EFF1689008D8B83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				810C84C51EFF1689008D8B83 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D3F7B73F1EFF0789009FB4AD = {
 			isa = PBXGroup;
 			children = (
 				D3F7B74A1EFF0789009FB4AD /* hipHopHackathon2017 */,
 				D3F7B75F1EFF0789009FB4AD /* hipHopHackathon2017Tests */,
 				D3F7B7491EFF0789009FB4AD /* Products */,
+				810C84C41EFF1689008D8B83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +105,7 @@
 				D3F7B74B1EFF0789009FB4AD /* AppDelegate.swift */,
 				D3F7B74D1EFF0789009FB4AD /* FirstViewController.swift */,
 				D3F7B74F1EFF0789009FB4AD /* Main.storyboard */,
+				810C84C21EFF149B008D8B83 /* MapViewController.swift */,
 				810C84C01EFF1112008D8B83 /* DestinationViewController.swift */,
 				810C84BE1EFF0D10008D8B83 /* SecondViewController.swift */,
 				D3F7B7521EFF0789009FB4AD /* Assets.xcassets */,
@@ -223,6 +238,7 @@
 				D3F7B7701EFF0866009FB4AD /* APIRequestManager.swift in Sources */,
 				D3F7B76E1EFF0852009FB4AD /* FunThingsToDo.swift in Sources */,
 				D3F7B74C1EFF0789009FB4AD /* AppDelegate.swift in Sources */,
+				810C84C31EFF149B008D8B83 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
