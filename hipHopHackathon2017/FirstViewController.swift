@@ -17,7 +17,7 @@ class FirstViewController: UIViewController {
     print("GS button tapped")}
     
     override func viewDidLoad() {
-                super.viewDidLoad()
+        super.viewDidLoad()
     }
     
     func getParks() {

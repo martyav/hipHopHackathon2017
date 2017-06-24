@@ -11,12 +11,10 @@ import Foundation
 
 class FunThingsToDo {
     let name: String
-    let date: String
     let location: String
     
-    init(name: String, date: String, location: String) {
+    init(name: String, location: String) {
         self.name = name
-        self.date = date
         self.location = location
     }
 }
@@ -26,14 +24,16 @@ class Beach: FunThingsToDo {}
 
 
 class Park: FunThingsToDo {
-    convenience init?(from dict: [String:Any]) throws {
-        guard let titleField = dict["title"] as? [String : Any],
-            let name = dict["$t"] as? String,
-            let date = dict["content"] as? String,
-            let location = dict["$t"] as? String else {
+    convenience init?(from dict: [String : String]) throws {
+        
+        guard let name = dict["name"],
+            let location = dict["location"] else {
                 
                 throw ParseError.parsingResults
         }
+        
+        self.init(name: name, location: location)
+
     }
     
     static func getParks(from data: Data) -> [Park]? {
@@ -41,14 +41,12 @@ class Park: FunThingsToDo {
         do {
             let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
             
-            guard let result = jsonData as? [String : Any],
-                let feed = result["feed"] as? [String : Any],
-                let entries = feed["entry"] as? [[String : Any]] else {
+            guard let results = jsonData as? [[String : String]] else {
                     throw ParseError.results
             }
             
-            for entry in entries {
-                if let parkDict = try Park(from: entry) {
+            for result in results {
+                if let parkDict = try Park(from: result) {
                     parks?.append(parkDict)
                 }
             }
