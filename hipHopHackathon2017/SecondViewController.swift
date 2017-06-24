@@ -9,11 +9,14 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    @IBOutlet weak var randomTripButton: UIButton!
 
+    @IBAction func randomTripButtonTapped(_ sender: UIButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
         /*
