@@ -246,7 +246,7 @@
         <scene sceneID="pyw-Fq-cBd">
             <objects>
                 <navigationController id="zQx-KJ-ly1" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nsV-Dj-xuH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nsV-Dj-xuH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
