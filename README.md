@@ -1,3 +1,5 @@
 # hipHopHackathon2017
 
-We are helping students who love hip hop discover tech.
+Our app is called "Creative Days".
+
+It helps kids find fun things to do, using the Open NYC API.
