@@ -10,7 +10,7 @@
 		810C84BF1EFF0D10008D8B83 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C84BE1EFF0D10008D8B83 /* SecondViewController.swift */; };
 		810C84C11EFF1112008D8B83 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C84C01EFF1112008D8B83 /* DestinationViewController.swift */; };
 		810C84C31EFF149B008D8B83 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C84C21EFF149B008D8B83 /* MapViewController.swift */; };
-		810C84C61EFF1689008D8B83 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810C84C51EFF1689008D8B83 /* MapKit.framework */; };
+		810C84C61EFF1689008D8B83 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810C84C51EFF1689008D8B83 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D3F7B74C1EFF0789009FB4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B74B1EFF0789009FB4AD /* AppDelegate.swift */; };
 		D3F7B74E1EFF0789009FB4AD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B74D1EFF0789009FB4AD /* FirstViewController.swift */; };
 		D3F7B7511EFF0789009FB4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F7B74F1EFF0789009FB4AD /* Main.storyboard */; };

@@ -12,14 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var bigCloudView: UIImageView?
-    var leftCloudView1: UIImageView?
-    var leftCloudView2: UIImageView?
-    var leftCloudView3: UIImageView?
-    var rightCloudView1: UIImageView?
-    var rightCloudView2: UIImageView?
-    var rightCloudView3: UIImageView?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

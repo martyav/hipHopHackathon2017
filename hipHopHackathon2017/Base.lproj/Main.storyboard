@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -200,10 +200,6 @@
                                     <color key="titleShadowColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozO-KZ-spf">
-                                <rect key="frame" x="305" y="539" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDO-r2-gOp">
                                 <rect key="frame" x="1" y="0.0" width="373" height="44"/>
                                 <items>
@@ -309,55 +305,13 @@
                             <constraint firstItem="tdx-RS-Gqj" firstAttribute="bottom" secondItem="9ct-TC-J2N" secondAttribute="top" id="xq2-jZ-Hwu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="tdx-RS-Gqj" id="2AV-eL-mhb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Spr-P6-7xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="916" y="963"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="8RD-Me-UxC">
-            <objects>
-                <tableViewController id="aPa-77-yYm" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5zW-iQ-dnE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1zc-WE-Nqb">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1zc-WE-Nqb" id="YPQ-TQ-tUv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="aPa-77-yYm" id="ZEx-rd-gKW"/>
-                            <outlet property="delegate" destination="aPa-77-yYm" id="7l5-8V-TRz"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="siq-KM-1rZ"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fn3-jQ-tFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="450" y="1809"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="pyw-Fq-cBd">
-            <objects>
-                <navigationController id="zQx-KJ-ly1" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nsV-Dj-xuH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="aPa-77-yYm" kind="relationship" relationship="rootViewController" id="cdQ-ko-mMw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v3l-db-P4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-495" y="1809"/>
         </scene>
         <!--Destination View Controller-->
         <scene sceneID="OhT-dM-16l">
@@ -478,6 +432,6 @@
         <image name="icons8-Oak Leaf-100" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cdv-4c-WuJ"/>
+        <segue reference="h6R-pg-Mox"/>
     </inferredMetricsTieBreakers>
 </document>
