@@ -20,6 +20,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var recommendedMiddle: UIButton!
     @IBOutlet weak var recommendedRight: UIButton!
     @IBAction func recommendedLeftTapped(_ sender: UIButton) {
+        getParks()
     }
     @IBAction func recommendedMiddleTapped(_ sender: UIButton) {
     }
@@ -34,18 +35,19 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getParks()
     }
     
     func getParks() {
         APIRequestManager.manager.getData(endPoint: Endpoints.Parks) { (data: Data?) in
             if data != nil {
-                if let returnedParks = Park.getParks(from: data!) {
-                    self.parkArray = returnedParks
-                    print("We've got returns: \(self.parkArray.count)")
-                    DispatchQueue.main.async {
-                        // self.activityIndicator.stopAnimating()
-                        // self.tableView.reloadData()
-                    }
+                let returnedParks = Park.getParks(from: data!)
+                //print(returnedParks)
+                self.parkArray = returnedParks
+                print("We've got returns: \(self.parkArray.count)")
+                DispatchQueue.main.async {
+                    // self.activityIndicator.stopAnimating()
+                    // self.tableView.reloadData()
                 }
             } else {
                 print("error loading data!")

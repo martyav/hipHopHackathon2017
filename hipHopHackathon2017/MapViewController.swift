@@ -58,8 +58,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
-    // not currently working...
-    
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let circleOverlayRenderer: MKCircleRenderer = MKCircleRenderer(circle: overlay as! MKCircle)
         circleOverlayRenderer.fillColor = UIColor(red: 158/255, green: 170/255, blue: 237/255, alpha: 0.25)
@@ -73,5 +71,4 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.centerCoordinate = userLocation.location!.coordinate
     }
     
-
 }
