@@ -117,7 +117,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTK-af-Dqg">
-                                <rect key="frame" x="1" y="274" width="373" height="200"/>
+                                <rect key="frame" x="1" y="271" width="373" height="200"/>
                                 <color key="backgroundColor" red="0.61960784310000006" green="0.66666666669999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="mH9-Ly-ysh"/>
@@ -134,7 +134,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJz-uN-F1k" userLabel="RecommendedLeft">
-                                <rect key="frame" x="1" y="126" width="119" height="100"/>
+                                <rect key="frame" x="1" y="123" width="119" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="119" id="eI3-dc-6fJ"/>
@@ -149,7 +149,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSO-YN-twU" userLabel="RecommendedMiddle">
-                                <rect key="frame" x="128" y="126" width="118" height="100"/>
+                                <rect key="frame" x="128" y="123" width="118" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
                                 <state key="normal" title="Beaches" image="icons8-Beach-100">
@@ -160,7 +160,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxU-5f-oCH" userLabel="RecommendedRight">
-                                <rect key="frame" x="254" y="126" width="121" height="100"/>
+                                <rect key="frame" x="254" y="123" width="121" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
                                 <state key="normal" title="Events" image="icons8-Dancing-100">
@@ -171,7 +171,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcz-Gk-aEb" userLabel="ProfileButton">
-                                <rect key="frame" x="16" y="532" width="73" height="47"/>
+                                <rect key="frame" x="16" y="529" width="73" height="50"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
                                 <size key="titleShadowOffset" width="-3" height="3"/>
                                 <state key="normal" title="Profile">
@@ -180,7 +180,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICq-DX-ujo" userLabel="UseLocationButton">
-                                <rect key="frame" x="148" y="532" width="78" height="47"/>
+                                <rect key="frame" x="148" y="529" width="78" height="50"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
                                 <size key="titleShadowOffset" width="-3" height="3"/>
                                 <state key="normal" title="Near Me">
@@ -192,7 +192,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deL-xD-PJm" userLabel="ChatButton">
-                                <rect key="frame" x="295" y="532" width="64" height="47"/>
+                                <rect key="frame" x="295" y="529" width="64" height="50"/>
                                 <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="30"/>
                                 <size key="titleShadowOffset" width="-3" height="3"/>
                                 <state key="normal" title="Chat">
@@ -207,7 +207,7 @@
                                 </items>
                             </navigationBar>
                             <searchBar contentMode="redraw" placeholder="What would you like to do today?" translatesAutoresizingMaskIntoConstraints="NO" id="iuK-VU-3fK">
-                                <rect key="frame" x="1" y="47" width="375" height="44"/>
+                                <rect key="frame" x="1" y="44" width="375" height="44"/>
                                 <color key="barTintColor" red="0.61960784310000006" green="0.66666666669999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -275,12 +275,23 @@
                     <view key="view" contentMode="scaleToFill" id="DNH-bn-Xrb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="hLm-BZ-LdK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hLm-BZ-LdK" secondAttribute="trailing" id="8gR-fz-j66"/>
+                            <constraint firstItem="hLm-BZ-LdK" firstAttribute="leading" secondItem="DNH-bn-Xrb" secondAttribute="leading" id="K16-SW-HaD"/>
+                            <constraint firstItem="hLm-BZ-LdK" firstAttribute="top" secondItem="a7f-pd-C9l" secondAttribute="bottom" constant="8" symbolic="YES" id="VJf-TM-Dnw"/>
+                            <constraint firstItem="hLm-BZ-LdK" firstAttribute="bottom" secondItem="pwB-VF-AsA" secondAttribute="top" id="arQ-uO-lBQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lah-YX-rRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="867"/>
+            <point key="canvasLocation" x="88.799999999999997" y="866.71664167916049"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="m6S-An-lmE">
