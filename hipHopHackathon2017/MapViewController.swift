@@ -30,6 +30,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.showsUserLocation = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        zoom()
+    }
+    
     // Taken from Annie's work on Cheers
     
     // MARK: - CoreLocation Delegate
@@ -55,13 +59,33 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     // MARK: - Mapview Delegate
     
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        let circleOverlayRenderer: MKCircleRenderer = MKCircleRenderer(circle: overlay as! MKCircle)
-        circleOverlayRenderer.fillColor = UIColor.orange.withAlphaComponent(0.25)
-        circleOverlayRenderer.strokeColor = .orange
-        circleOverlayRenderer.lineWidth = 3.0
-        return circleOverlayRenderer
+    func zoom() {
+        // zoom to show all markers, resource: http://stackoverflow.com/questions/3434020/ios-mkmapview-zoom-to-show-all-markers
+        let region = MKCoordinateRegion()
+        self.mapView.setRegion(self.mapView.regionThatFits(region), animated: true)
+        
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance((locationManager.location?.coordinate)!, 1000, 1000)
+        self.mapView.setRegion(coordinateRegion, animated: true)
+        DispatchQueue.main.async {
+            
+            let annotation: MKPointAnnotation = MKPointAnnotation()
+            annotation.coordinate = (self.locationManager.location?.coordinate)!
+            annotation.title = "This is you!"
+            self.mapView.addAnnotation(annotation)
+            let cirlceOverLay: MKCircle = MKCircle(center: annotation.coordinate, radius: 100.0)
+            self.mapView.add(cirlceOverLay)
+        }
     }
+    
+    // not currently working...
+    
+//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+//        let circleOverlayRenderer: MKCircleRenderer = MKCircleRenderer(circle: overlay as! MKCircle)
+//        circleOverlayRenderer.fillColor = UIColor.orange.withAlphaComponent(0.25)
+//        circleOverlayRenderer.strokeColor = .orange
+//        circleOverlayRenderer.lineWidth = 3.0
+//        return circleOverlayRenderer
+//    }
     
     // update mapview based on user movements
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {

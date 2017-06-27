@@ -12,6 +12,7 @@ class DestinationViewController: UIViewController {
 
     @IBAction func backNavBarButtonTapped(_ sender: UIBarButtonItem) {
     }
+    
     @IBOutlet weak var backNavBarButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
