@@ -11,6 +11,7 @@
 		810C84C11EFF1112008D8B83 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C84C01EFF1112008D8B83 /* DestinationViewController.swift */; };
 		810C84C31EFF149B008D8B83 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C84C21EFF149B008D8B83 /* MapViewController.swift */; };
 		810C84C61EFF1689008D8B83 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810C84C51EFF1689008D8B83 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		81AD51B61F030F85006A7E7B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD51B51F030F85006A7E7B /* ProfileViewController.swift */; };
 		D3F7B74C1EFF0789009FB4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B74B1EFF0789009FB4AD /* AppDelegate.swift */; };
 		D3F7B74E1EFF0789009FB4AD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B74D1EFF0789009FB4AD /* FirstViewController.swift */; };
 		D3F7B7511EFF0789009FB4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F7B74F1EFF0789009FB4AD /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		810C84C01EFF1112008D8B83 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
 		810C84C21EFF149B008D8B83 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		810C84C51EFF1689008D8B83 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		81AD51B51F030F85006A7E7B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D3F7B7481EFF0789009FB4AD /* hipHopHackathon2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hipHopHackathon2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F7B74B1EFF0789009FB4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F7B74D1EFF0789009FB4AD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				D3F7B74B1EFF0789009FB4AD /* AppDelegate.swift */,
 				D3F7B74D1EFF0789009FB4AD /* FirstViewController.swift */,
 				D3F7B74F1EFF0789009FB4AD /* Main.storyboard */,
+				81AD51B51F030F85006A7E7B /* ProfileViewController.swift */,
 				810C84C21EFF149B008D8B83 /* MapViewController.swift */,
 				810C84C01EFF1112008D8B83 /* DestinationViewController.swift */,
 				810C84BE1EFF0D10008D8B83 /* SecondViewController.swift */,
@@ -256,6 +259,7 @@
 			files = (
 				810C84C11EFF1112008D8B83 /* DestinationViewController.swift in Sources */,
 				810C84BF1EFF0D10008D8B83 /* SecondViewController.swift in Sources */,
+				81AD51B61F030F85006A7E7B /* ProfileViewController.swift in Sources */,
 				D3F7B74E1EFF0789009FB4AD /* FirstViewController.swift in Sources */,
 				D3F7B76C1EFF0822009FB4AD /* EndPoints.swift in Sources */,
 				D3F7B7721EFF0EEA009FB4AD /* ParseError.swift in Sources */,
