@@ -178,6 +178,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.0" green="0.37459377640000002" blue="0.83461538459999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="profileButtonTapped:" destination="2Xg-PF-gCA" eventType="touchUpInside" id="cLH-VM-SjL"/>
+                                    <segue destination="bYv-Xp-qpD" kind="show" id="ORN-A4-eFh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICq-DX-ujo" userLabel="UseLocationButton">
                                 <rect key="frame" x="148" y="529" width="78" height="50"/>
@@ -264,10 +268,10 @@
             </objects>
             <point key="canvasLocation" x="1112.8" y="136.28185907046478"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="taH-O3-peb">
             <objects>
-                <viewController id="bYv-Xp-qpD" sceneMemberID="viewController">
+                <viewController id="bYv-Xp-qpD" customClass="ProfileViewController" customModule="hipHopHackathon2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a7f-pd-C9l"/>
                         <viewControllerLayoutGuide type="bottom" id="pwB-VF-AsA"/>
@@ -279,6 +283,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="hLm-BZ-LdK">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Vk-5s-OLp">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Creative Days" id="Sk0-bz-B6e">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="zlf-hL-E2A"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Home" id="oJ3-IM-FJm">
+                                            <connections>
+                                                <segue destination="2Xg-PF-gCA" kind="show" id="0D8-s0-NCq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -461,6 +479,6 @@
         <image name="icons8-Oak Leaf-100" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5oX-dV-GPB"/>
+        <segue reference="0D8-s0-NCq"/>
     </inferredMetricsTieBreakers>
 </document>

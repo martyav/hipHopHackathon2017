@@ -32,6 +32,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var useLocationButton: UIButton!
     @IBOutlet weak var chatButton: UIButton!
     
+    @IBAction func profileButtonTapped(_ sender: UIButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
