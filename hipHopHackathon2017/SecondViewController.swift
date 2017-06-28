@@ -35,7 +35,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getParks()
     }
     
     func getParks() {

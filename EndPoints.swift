@@ -11,6 +11,6 @@ import Foundation
 enum Endpoints: String {
     case Parks = "https://data.cityofnewyork.us/resource/4xyq-5bdm.json"
     case Beaches = "https://www.nycgovparks.org/bigapps/DPR_Beaches_001.json"
-    case Events = "https://data.cityofnewyork.us/api/views/nyau-ykxp/rows.json?accessType=DOWNLOAD"
+    case Events = "https://data.cityofnewyork.us/api/views/nyau-ykxp/rows.json"
 }
 

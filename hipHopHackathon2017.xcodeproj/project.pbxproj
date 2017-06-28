@@ -114,9 +114,8 @@
 		D3F7B74A1EFF0789009FB4AD /* hipHopHackathon2017 */ = {
 			isa = PBXGroup;
 			children = (
+				D3F7B77D1F040EA7009FB4AD /* Networking */,
 				D3F7B7731EFF1AE8009FB4AD /* UI Resources */,
-				D3F7B76B1EFF0822009FB4AD /* EndPoints.swift */,
-				D3F7B77A1F02D840009FB4AD /* LocationManager.swift */,
 				D3F7B74B1EFF0789009FB4AD /* AppDelegate.swift */,
 				D3F7B74D1EFF0789009FB4AD /* FirstViewController.swift */,
 				D3F7B74F1EFF0789009FB4AD /* Main.storyboard */,
@@ -124,11 +123,8 @@
 				810C84C21EFF149B008D8B83 /* MapViewController.swift */,
 				810C84C01EFF1112008D8B83 /* DestinationViewController.swift */,
 				810C84BE1EFF0D10008D8B83 /* SecondViewController.swift */,
-				D3F7B7521EFF0789009FB4AD /* Assets.xcassets */,
 				D3F7B7541EFF0789009FB4AD /* LaunchScreen.storyboard */,
 				D3F7B7571EFF0789009FB4AD /* Info.plist */,
-				D3F7B76D1EFF0852009FB4AD /* FunThingsToDo.swift */,
-				D3F7B7711EFF0EEA009FB4AD /* ParseError.swift */,
 				D3F7B76F1EFF0866009FB4AD /* APIRequestManager.swift */,
 			);
 			path = hipHopHackathon2017;
@@ -146,10 +142,22 @@
 		D3F7B7731EFF1AE8009FB4AD /* UI Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D3F7B7521EFF0789009FB4AD /* Assets.xcassets */,
 				D3F7B7771EFF1B2F009FB4AD /* AmaticSC-Regular.ttf */,
 				D3F7B7741EFF1B25009FB4AD /* AmaticSC-Bold.ttf */,
 			);
 			name = "UI Resources";
+			sourceTree = "<group>";
+		};
+		D3F7B77D1F040EA7009FB4AD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D3F7B7711EFF0EEA009FB4AD /* ParseError.swift */,
+				D3F7B76D1EFF0852009FB4AD /* FunThingsToDo.swift */,
+				D3F7B77A1F02D840009FB4AD /* LocationManager.swift */,
+				D3F7B76B1EFF0822009FB4AD /* EndPoints.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
