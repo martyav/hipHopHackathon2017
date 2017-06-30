@@ -20,7 +20,40 @@ class FunThingsToDo {
 }
 
 
-class Beach: FunThingsToDo {}
+class Beach: FunThingsToDo {
+    convenience init(from dict: [String : Any]) {
+        
+        let name = dict["Name"] ?? "unknown"
+        let location = dict["Location"] ?? "unknown"
+        
+        self.init(name: name as! String, location: location as! String)
+        
+    }
+    
+    static func getBeaches(from data: Data) -> [Beach] {
+        var beaches: [Beach] = []
+        
+        do {
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
+            
+            guard let results = jsonData as? [[String : Any]] else {
+                throw ParseError.results
+            }
+            
+            for result in results {
+                let beachDict = Beach(from: result)
+                beaches.append(beachDict)
+            }
+        }
+            
+        catch {
+            print("You got an error: \(error)")
+        }
+        
+        return beaches
+    }
+
+}
 
 
 class Park: FunThingsToDo {
