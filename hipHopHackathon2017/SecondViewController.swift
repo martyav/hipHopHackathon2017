@@ -11,6 +11,7 @@ import UIKit
 class SecondViewController: UIViewController {
     
     var parkArray = [Park]()
+    var beachArray = [Beach]()
     
     @IBOutlet weak var randomTripButton: UIButton!
     
@@ -20,8 +21,10 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var recommendedMiddle: UIButton!
     @IBOutlet weak var recommendedRight: UIButton!
     @IBAction func recommendedLeftTapped(_ sender: UIButton) {
+        getParks()
     }
     @IBAction func recommendedMiddleTapped(_ sender: UIButton) {
+        getBeaches()
     }
     
     @IBAction func recommendedRightTapped(_ sender: UIButton) {
@@ -41,13 +44,31 @@ class SecondViewController: UIViewController {
     func getParks() {
         APIRequestManager.manager.getData(endPoint: Endpoints.Parks) { (data: Data?) in
             if data != nil {
-                if let returnedParks = Park.getParks(from: data!) {
-                    self.parkArray = returnedParks
-                    print("We've got returns: \(self.parkArray.count)")
-                    DispatchQueue.main.async {
-                        // self.activityIndicator.stopAnimating()
-                        // self.tableView.reloadData()
-                    }
+                let returnedParks = Park.getParks(from: data!)
+                //print(returnedParks)
+                self.parkArray = returnedParks
+                print("We've got returns: \(self.parkArray.count)")
+                DispatchQueue.main.async {
+                    // self.activityIndicator.stopAnimating()
+                    // self.tableView.reloadData()
+                }
+            } else {
+                print("error loading data!")
+                // self.activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
+    func getBeaches() {
+        APIRequestManager.manager.getData(endPoint: Endpoints.Beaches) { (data: Data?) in
+            if data != nil {
+                let returnedBeaches = Beach.getBeaches(from: data!)
+                //print(returnedParks)
+                self.beachArray = returnedBeaches
+                print("We've got returns: \(self.beachArray.count)")
+                DispatchQueue.main.async {
+                    // self.activityIndicator.stopAnimating()
+                    // self.tableView.reloadData()
                 }
             } else {
                 print("error loading data!")

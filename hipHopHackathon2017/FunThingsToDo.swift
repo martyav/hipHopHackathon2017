@@ -20,35 +20,66 @@ class FunThingsToDo {
 }
 
 
-class Beach: FunThingsToDo {}
+class Beach: FunThingsToDo {
+    convenience init(from dict: [String : Any]) {
+        
+        let name = dict["Name"] ?? "unknown"
+        let location = dict["Location"] ?? "unknown"
+        
+        self.init(name: name as! String, location: location as! String)
+        
+    }
+    
+    static func getBeaches(from data: Data) -> [Beach] {
+        var beaches: [Beach] = []
+        
+        do {
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
+            
+            guard let results = jsonData as? [[String : Any]] else {
+                throw ParseError.results
+            }
+            
+            for result in results {
+                let beachDict = Beach(from: result)
+                beaches.append(beachDict)
+            }
+        }
+            
+        catch {
+            print("You got an error: \(error)")
+        }
+        
+        return beaches
+    }
+
+}
 
 
 class Park: FunThingsToDo {
-    convenience init?(from dict: [String : String]) throws {
+    
+    convenience init(from dict: [String : String]) {
         
-        guard let name = dict["name"],
-            let location = dict["location"] else {
-                
-                throw ParseError.parsingResults
-        }
+        let name = dict["name"] ?? "unknown"
+        let location = dict["location"] ?? "unknown"
         
         self.init(name: name, location: location)
-
+        
     }
     
-    static func getParks(from data: Data) -> [Park]? {
-        var parks: [Park]? = []
+    static func getParks(from data: Data) -> [Park] {
+        var parks: [Park] = []
+        
         do {
             let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
             
             guard let results = jsonData as? [[String : String]] else {
-                    throw ParseError.results
+                throw ParseError.results
             }
             
             for result in results {
-                if let parkDict = try Park(from: result) {
-                    parks?.append(parkDict)
-                }
+                let parkDict = Park(from: result)
+                parks.append(parkDict)
             }
         }
             
@@ -58,7 +89,7 @@ class Park: FunThingsToDo {
         
         return parks
     }
-
+    
 }
 
 

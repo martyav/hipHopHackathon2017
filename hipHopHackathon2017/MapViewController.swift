@@ -38,25 +38,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     // MARK: - CoreLocation Delegate
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .authorizedWhenInUse, .authorizedAlways:
-            manager.startUpdatingLocation()
-        case .denied, .restricted:
-            let alertController = UIAlertController(title: "Request denied!", message: "We can't currently access your location. We were denied or restricted from having that info. Sorry!", preferredStyle: UIAlertControllerStyle.alert)
-            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
-            }
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
-        default:
-            self.locationManager.requestAlwaysAuthorization()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let _ = locations.first else { return }
-    }
-    
     // MARK: - Mapview Delegate
     
     func zoom() {
@@ -77,20 +58,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
-    // not currently working...
-    
-//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-//        let circleOverlayRenderer: MKCircleRenderer = MKCircleRenderer(circle: overlay as! MKCircle)
-//        circleOverlayRenderer.fillColor = UIColor.orange.withAlphaComponent(0.25)
-//        circleOverlayRenderer.strokeColor = .orange
-//        circleOverlayRenderer.lineWidth = 3.0
-//        return circleOverlayRenderer
-//    }
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let circleOverlayRenderer: MKCircleRenderer = MKCircleRenderer(circle: overlay as! MKCircle)
+        circleOverlayRenderer.fillColor = UIColor(red: 158/255, green: 170/255, blue: 237/255, alpha: 0.25)
+        circleOverlayRenderer.strokeColor = UIColor(red: 158/255, green: 170/255, blue: 237/255, alpha: 1)
+        circleOverlayRenderer.lineWidth = 3.0
+        return circleOverlayRenderer
+    }
     
     // update mapview based on user movements
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         mapView.centerCoordinate = userLocation.location!.coordinate
     }
     
-
 }
