@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol Constructable {
+    var name: String { get }
+    var location: String { get }
+}
 
 class FunThingsToDo {
     let name: String
@@ -17,21 +21,20 @@ class FunThingsToDo {
         self.name = name
         self.location = location
     }
-}
-
-
-class Beach: FunThingsToDo {
+    
     convenience init(from dict: [String : Any]) {
         
-        let name = dict["Name"] ?? "unknown"
-        let location = dict["Location"] ?? "unknown"
+        let name = dict["name"] ?? dict["Name"] ?? "unknown"
+        let location = dict["location"] ?? dict["Location"] ?? "unknown"
         
         self.init(name: name as! String, location: location as! String)
         
     }
-    
-    static func getBeaches(from data: Data) -> [Beach] {
-        var beaches: [Beach] = []
+}
+
+class Beach: FunThingsToDo {
+    static func construct(from data: Data) -> [Beach] {
+        var objects: [Beach] = []
         
         do {
             let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
@@ -41,8 +44,8 @@ class Beach: FunThingsToDo {
             }
             
             for result in results {
-                let beachDict = Beach(from: result)
-                beaches.append(beachDict)
+                let objectDict = Beach(from: result)
+                objects.append(objectDict)
             }
         }
             
@@ -50,36 +53,25 @@ class Beach: FunThingsToDo {
             print("You got an error: \(error)")
         }
         
-        return beaches
+        return objects
     }
-
 }
 
 
 class Park: FunThingsToDo {
-    
-    convenience init(from dict: [String : String]) {
-        
-        let name = dict["name"] ?? "unknown"
-        let location = dict["location"] ?? "unknown"
-        
-        self.init(name: name, location: location)
-        
-    }
-    
-    static func getParks(from data: Data) -> [Park] {
-        var parks: [Park] = []
+    static func construct(from data: Data) -> [Park] {
+        var objects: [Park] = []
         
         do {
             let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
             
-            guard let results = jsonData as? [[String : String]] else {
+            guard let results = jsonData as? [[String : Any]] else {
                 throw ParseError.results
             }
             
             for result in results {
-                let parkDict = Park(from: result)
-                parks.append(parkDict)
+                let objectDict = Park(from: result)
+                objects.append(objectDict)
             }
         }
             
@@ -87,11 +79,36 @@ class Park: FunThingsToDo {
             print("You got an error: \(error)")
         }
         
-        return parks
+        return objects
     }
-    
 }
 
 
-class Event: FunThingsToDo {}
+class Event: FunThingsToDo {
+    static func construct(from data: Data) -> [Event] {
+        var objects: [Event] = []
+        
+        do {
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
+            
+            guard let results = jsonData as? [String : Any] else {
+                throw ParseError.results
+            }
+            
+            if let items = results["items"] as? [[String : Any]] {
+                
+                for item in items {
+                    let objectDict = Event(from: item)
+                    objects.append(objectDict)
+                }
+            }
+        }
+            
+        catch {
+            print("You got an error: \(error)")
+        }
+        
+        return objects
+    }
+}
 
