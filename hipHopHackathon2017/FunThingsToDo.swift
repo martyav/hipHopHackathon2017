@@ -8,11 +8,12 @@
 
 import Foundation
 
-protocol ConstructFromJSON {
-    func construct(from data: Data) -> [FunThingsToDo]
+protocol Constructable {
+    var name: String { get }
+    var location: String { get }
 }
 
-class FunThingsToDo: ConstructFromJSON {
+class FunThingsToDo {
     let name: String
     let location: String
     
@@ -29,9 +30,11 @@ class FunThingsToDo: ConstructFromJSON {
         self.init(name: name as! String, location: location as! String)
         
     }
-    
-    internal func construct(from data: Data) -> [FunThingsToDo] {
-        var objects: [FunThingsToDo] = []
+}
+
+class Beach: FunThingsToDo {
+    static func construct(from data: Data) -> [Beach] {
+        var objects: [Beach] = []
         
         do {
             let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
@@ -41,7 +44,7 @@ class FunThingsToDo: ConstructFromJSON {
             }
             
             for result in results {
-                let objectDict = FunThingsToDo(from: result)
+                let objectDict = Beach(from: result)
                 objects.append(objectDict)
             }
         }
@@ -54,22 +57,55 @@ class FunThingsToDo: ConstructFromJSON {
     }
 }
 
-class Beach: FunThingsToDo {
-    convenience init(from dict: [String : Any]) {
-        
-        let name = dict["Name"] ?? "unknown"
-        let location = dict["Location"] ?? "unknown"
-        
-        self.init(name: name as! String, location: location as! String)
-        
-    }
-    
-}
-
 
 class Park: FunThingsToDo {
+    static func construct(from data: Data) -> [Park] {
+        var objects: [Park] = []
+        
+        do {
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
+            
+            guard let results = jsonData as? [[String : Any]] else {
+                throw ParseError.results
+            }
+            
+            for result in results {
+                let objectDict = Park(from: result)
+                objects.append(objectDict)
+            }
+        }
+            
+        catch {
+            print("You got an error: \(error)")
+        }
+        
+        return objects
+    }
 }
 
 
-class Event: FunThingsToDo {}
+class Event: FunThingsToDo {
+    static func construct(from data: Data) -> [Event] {
+        var objects: [Event] = []
+        
+        do {
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
+            
+            guard let results = jsonData as? [[String : Any]] else {
+                throw ParseError.results
+            }
+            
+            for result in results {
+                let objectDict = Event(from: result)
+                objects.append(objectDict)
+            }
+        }
+            
+        catch {
+            print("You got an error: \(error)")
+        }
+        
+        return objects
+    }
+}
 

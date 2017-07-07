@@ -42,7 +42,7 @@ class SecondViewController: UIViewController {
     func getParks() {
         APIRequestManager.manager.getData(endPoint: Endpoints.Parks) { (data: Data?) in
             if data != nil {
-                let returnedParks = Park.getParks(from: data!)
+                let returnedParks = Park.construct(from: data!)
                 //print(returnedParks)
                 self.parkArray = returnedParks
                 print("We've got returns: \(self.parkArray.count)")
@@ -60,7 +60,7 @@ class SecondViewController: UIViewController {
     func getBeaches() {
         APIRequestManager.manager.getData(endPoint: Endpoints.Beaches) { (data: Data?) in
             if data != nil {
-                let returnedBeaches = Beach.getBeaches(from: data!)
+                let returnedBeaches = Beach.construct(from: data!)
                 //print(returnedParks)
                 self.beachArray = returnedBeaches
                 print("We've got returns: \(self.beachArray.count)")
