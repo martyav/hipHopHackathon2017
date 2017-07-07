@@ -12,6 +12,7 @@ class SecondViewController: UIViewController {
     
     var parkArray = [Park]()
     var beachArray = [Beach]()
+    var eventArray = [Event]()
     
     @IBOutlet weak var randomTripButton: UIButton!
     
@@ -28,6 +29,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func recommendedRightTapped(_ sender: UIButton) {
+        getEvents()
     }
     
     
@@ -45,7 +47,7 @@ class SecondViewController: UIViewController {
                 let returnedParks = Park.construct(from: data!)
                 //print(returnedParks)
                 self.parkArray = returnedParks
-                print("We've got returns: \(self.parkArray.count)")
+                print("We've got parks: \(self.parkArray.count)")
                 DispatchQueue.main.async {
                     // self.activityIndicator.stopAnimating()
                     // self.tableView.reloadData()
@@ -63,7 +65,25 @@ class SecondViewController: UIViewController {
                 let returnedBeaches = Beach.construct(from: data!)
                 //print(returnedParks)
                 self.beachArray = returnedBeaches
-                print("We've got returns: \(self.beachArray.count)")
+                print("We've got beaches: \(self.beachArray.count)")
+                DispatchQueue.main.async {
+                    // self.activityIndicator.stopAnimating()
+                    // self.tableView.reloadData()
+                }
+            } else {
+                print("error loading data!")
+                // self.activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
+    func getEvents() {
+        APIRequestManager.manager.getData(endPoint: Endpoints.Events) { (data: Data?) in
+            if data != nil {
+                let returnedEvents = Event.construct(from: data!)
+                //print(returnedParks)
+                self.eventArray = returnedEvents
+                print("We've got events: \(self.eventArray.count)")
                 DispatchQueue.main.async {
                     // self.activityIndicator.stopAnimating()
                     // self.tableView.reloadData()

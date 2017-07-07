@@ -91,13 +91,16 @@ class Event: FunThingsToDo {
         do {
             let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
             
-            guard let results = jsonData as? [[String : Any]] else {
+            guard let results = jsonData as? [String : Any] else {
                 throw ParseError.results
             }
             
-            for result in results {
-                let objectDict = Event(from: result)
-                objects.append(objectDict)
+            if let items = results["items"] as? [[String : Any]] {
+                
+                for item in items {
+                    let objectDict = Event(from: item)
+                    objects.append(objectDict)
+                }
             }
         }
             
