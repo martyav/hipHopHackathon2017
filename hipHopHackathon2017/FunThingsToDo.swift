@@ -8,11 +8,6 @@
 
 import Foundation
 
-protocol Constructable {
-    var name: String { get }
-    var location: String { get }
-}
-
 class FunThingsToDo {
     let name: String
     let location: String
